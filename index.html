@@ -1,39 +1,63 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!doctype html>
+  <html lang="en">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./style.css">
-    <title>Epex spot data</title>
-</head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<body>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <div class="jumbotron">
-                    <h1 class="display-4">Epex spot data</h1>
-                    <hr class="my-4">
-                    <p>
-                      Download epex french hours data of at <code>'./data/YYYY-MM-DD.json'</code>.<br/>
-                      Example: <a href="./data/2019-06-10.json">data/2019-06-10.json</a>
-                    </p>
-                    <p>
-                      <a href="https://github.com/ewoken/epex-spot-data">GitHub repo</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+      <link rel="stylesheet" href="./style.css">
+      <title>Epex spot data</title>
+  </head>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
+  <body>
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+              <div class="col-10">
+                  <div class="jumbotron">
+                      <h1 class="display-4">Epex spot data</h1>
+                      <p class="lead"><a href="https://github.com/ewoken/epex-spot-data">GitHub repo</a></p>
+                      <hr class="my-4">
+                      <p>
+                        You can download french epex spot data in JSON at <code>'./data/YYYY.json'</code> where YYYY is the year you want (ex: <a href="./data/2007.json">./data/2007.json</a>).<br/>
+                        You can also download the data in a CSV format below :
+                      </p>
+                      <div>
+                        <div class="dropdown">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Download
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./data/2005.csv">2005.csv</a>
+<a class="dropdown-item" href="./data/2006.csv">2006.csv</a>
+<a class="dropdown-item" href="./data/2007.csv">2007.csv</a>
+<a class="dropdown-item" href="./data/2008.csv">2008.csv</a>
+<a class="dropdown-item" href="./data/2009.csv">2009.csv</a>
+<a class="dropdown-item" href="./data/2010.csv">2010.csv</a>
+<a class="dropdown-item" href="./data/2011.csv">2011.csv</a>
+<a class="dropdown-item" href="./data/2012.csv">2012.csv</a>
+<a class="dropdown-item" href="./data/2013.csv">2013.csv</a>
+<a class="dropdown-item" href="./data/2014.csv">2014.csv</a>
+<a class="dropdown-item" href="./data/2015.csv">2015.csv</a>
+<a class="dropdown-item" href="./data/2016.csv">2016.csv</a>
+<a class="dropdown-item" href="./data/2017.csv">2017.csv</a>
+<a class="dropdown-item" href="./data/2018.csv">2018.csv</a>
+<a class="dropdown-item" href="./data/2019.csv">2019.csv</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-</html>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  </html>
+  
