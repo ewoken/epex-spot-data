@@ -59,6 +59,8 @@ async function main() {
     const currentYear = today.year();
     const firstYear = lastYear === currentYear ? currentYear : lastYear + 1;
 
+    console.log('Cache found, first year :', firstYear);
+
     startDate = moment().dayOfYear(1).year(firstYear);
   }
 
