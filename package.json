@@ -1,0 +1,28 @@
+{
+  "name": "epex-spot-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewoken/epex-spot-data.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ewoken/epex-spot-data/issues"
+  },
+  "homepage": "https://github.com/ewoken/epex-spot-data#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "node-fetch": "^2.6.0",
+    "node-html-parser": "^1.1.15"
+  }
+}
