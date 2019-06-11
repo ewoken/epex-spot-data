@@ -25,7 +25,8 @@ async function fetchDayAheadAuctionData(startOfWeekInput) {
     const [__, ___, ...cells] = line.querySelectorAll('th').concat(line.querySelectorAll('td'));
     return cells.map(c => Number(c.innerHTML.replace(',', '')));
   });
-  const dataByHour = chunk(flatten(transpose(data)), 2);
+  const dataByHour = chunk(flatten(transpose(data)), 2)
+    .filter(d => !Number.isNaN(d[0])); // when changing to summer/winter time
 
   return dataByHour.map((d, i) => ({
     startDate: moment(startOfWeek).add(i, 'hours').format(),
@@ -55,7 +56,7 @@ async function main() {
 
   if (fs.existsSync('./data/years.json')) {
     years = JSON.parse(fs.readFileSync('./data/years.json')).sort();
-    const lastYear = years.pop();
+    const lastYear = years[years.length - 1];
     const currentYear = today.year();
     const firstYear = lastYear === currentYear ? currentYear : lastYear + 1;
 
@@ -77,7 +78,7 @@ async function main() {
   const finalYears = uniq(Object.keys(dataByYear).map(i => Number(i)).concat(years)).sort();
 
   forIn(dataByYear, (values, year) => {
-    const sorted = sortBy(values, 'startDate');
+    const sorted = sortBy(values, d => moment(d.startDate).tz('Europe/Paris').unix());
 
     console.log(`Write files for year ${year} (${sorted.length} items)`);
     fs.writeFileSync(`./data/${year}.json`, JSON.stringify(sorted));

@@ -30,7 +30,7 @@ function toCSV(array, keys) {
   const lines = array.map(value => {
     return keys.map(key => value[key]).join(',');
   });
-  const content = [headers, ...lines];
+  const content = [headers, ...lines, '\n'];
   return content.join('\n');
 }
 
