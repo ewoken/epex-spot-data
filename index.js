@@ -88,5 +88,9 @@ async function main() {
   fs.writeFileSync('./data/years.json', JSON.stringify(finalYears));
 }
 
-main();
+main()
+.catch(error => {
+  console.error(error);
+  process.exit(1);s
+});
 
