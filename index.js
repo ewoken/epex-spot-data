@@ -70,7 +70,7 @@ async function main() {
     return moment(startDate).add(i, 'week').format();
   });
 
-  const weekData = await chunkAndChainPromises(weeks, date => fetchDayAheadAuctionData(date), 50);
+  const weekData = await chunkAndChainPromises(weeks, date => fetchDayAheadAuctionData(date), 1);
   const allData = uniqBy(flatten(weekData), 'startDate')
     .filter(item => item.startDate < today.format());
 
