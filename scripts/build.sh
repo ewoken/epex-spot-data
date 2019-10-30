@@ -1,3 +1,3 @@
 mkdir -p data
 
-node index.js || exit 1
+node --tls-min-v1.0 index.js || exit 1
