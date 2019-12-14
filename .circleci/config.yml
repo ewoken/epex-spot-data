@@ -27,7 +27,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - cache-data-v2-
+            - cache-data-v3-
 
       - run: npm install
 
@@ -39,7 +39,7 @@ jobs:
       - run: npm run build
 
       - save_cache:
-          key: cache-data-v2-{{ epoch }}
+          key: cache-data-v3-{{ epoch }}
           paths:
             - data
 

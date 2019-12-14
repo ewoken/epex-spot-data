@@ -1,3 +1,5 @@
 mkdir -p data
 
-node --tls-min-v1.0 index.js || exit 1
+cp historicData/*.json data
+
+node index.js || exit 1
